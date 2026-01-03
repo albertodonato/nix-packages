@@ -75,7 +75,7 @@ stdenv.mkDerivation rec {
     description = "Open-source modular audio tools for musicians, tinkerers & tone hackers";
     homepage = "https://mod.audio/desktop/";
     license = licenses.agpl3Only;
-    platforms = platforms.linux;
     maintainers = [ maintainers.yourname ];
+    platforms = platforms.linux;
   };
 }
