@@ -5,8 +5,7 @@
 , autoPatchelfHook
 , imagemagick
 , libsForQt5
-, # dependencies
-  alsa-lib
+, alsa-lib
 , dbus
 , desktop-file-utils
 , pipewire
