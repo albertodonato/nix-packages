@@ -1,17 +1,17 @@
-{ lib
-, stdenv
-, fetchurl
-, makeWrapper
-, autoPatchelfHook
-, imagemagick
-, libsForQt5
-, alsa-lib
-, dbus
-, desktop-file-utils
-, pipewire
-, qt5
-, shared-mime-info
-,
+{
+  lib,
+  stdenv,
+  fetchurl,
+  makeWrapper,
+  autoPatchelfHook,
+  imagemagick,
+  libsForQt5,
+  alsa-lib,
+  dbus,
+  desktop-file-utils,
+  pipewire,
+  qt5,
+  shared-mime-info,
 }:
 
 stdenv.mkDerivation rec {
@@ -63,9 +63,11 @@ stdenv.mkDerivation rec {
     done
 
     mkdir -p $out/share/applications
-    sed -i "s,^Exec=.*\$,Exec=$out/bin/mod-desktop," mod-desktop.desktop
-    sed -i "s/^Icon=.*/Icon=mod-desktop/" mod-desktop.desktop
-    desktop-file-install --dir=$out/share/applications mod-desktop.desktop
+    desktop-file-install \
+      --set-key=Exec --set-value=$out/bin/mod-desktop \
+      --set-key=Icon --set-value=mod-desktop \
+      --dir=$out/share/applications \
+      mod-desktop.desktop
 
     runHook postInstall
   '';
