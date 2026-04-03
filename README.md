@@ -5,7 +5,7 @@ This contains some additional Nix packages.
 Can be added to a flake `inputs` with
 
 ```nix
-ack-nix-packages = {
+<input-name> = {
   url = "github:albertodonato/nix-packages";
   inputs.nixpkgs.follows = "nixpkgs";
 };
@@ -13,6 +13,6 @@ ack-nix-packages = {
 
 A specific package can be run via
 
-```
-nix run ',#<packagename>'
+```bash
+nix run ',#<package-name>'
 ```
