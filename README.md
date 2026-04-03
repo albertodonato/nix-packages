@@ -14,5 +14,5 @@ Can be added to a flake `inputs` with
 A specific package can be run via
 
 ```bash
-nix run ',#<package-name>'
+nix run '.#<package-name>'
 ```
