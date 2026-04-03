@@ -10,3 +10,9 @@ ack-nix-packages = {
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
+
+A specific package can be run via
+
+```
+nix run ',#<packagename>'
+```
