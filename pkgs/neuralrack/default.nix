@@ -16,7 +16,7 @@
 
 stdenv.mkDerivation rec {
   pname = "neuralrack";
-  version = "0.3.2";
+  version = "0.3.3";
 
   src = fetchgit {
     url = "https://github.com/brummer10/NeuralRack.git";
@@ -59,7 +59,6 @@ stdenv.mkDerivation rec {
     mkdir -p $out/share/applications
     desktop-file-install \
       --set-key=Version --set-value=1.0 \
-      --set-key=Exec --set-value=$out/bin/Neuralrack \
       --dir=$out/share/applications \
       NeuralRack/standalone/NeuralRack.desktop
   '';
