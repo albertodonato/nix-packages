@@ -2,6 +2,7 @@
   lib,
   stdenv,
   fetchgit,
+  alsa-lib,
   cairo,
   libX11,
   libjack2 ? null,
@@ -33,6 +34,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
+    alsa-lib
     cairo.dev
     libX11
     libsndfile
