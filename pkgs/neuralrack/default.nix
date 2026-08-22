@@ -17,7 +17,7 @@
 
 stdenv.mkDerivation rec {
   pname = "neuralrack";
-  version = "0.3.3";
+  version = "0.4.1";
 
   src = fetchgit {
     url = "https://github.com/brummer10/NeuralRack.git";
