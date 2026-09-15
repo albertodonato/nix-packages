@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
   src = fetchgit {
     url = "https://github.com/brummer10/NeuralRack.git";
     rev = "v${version}";
-    hash = "sha256-N1U3ekTAZqu+aQE/WIL3RHxDQGSxDecFKak5KScioCY=";
+    hash = "sha256-60b18rAj4Za0H1lzPzvRYQdLFMYCBkKGMmSYJGBOaIQ=";
     fetchSubmodules = true;
   };
 
